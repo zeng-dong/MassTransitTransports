@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<UserSecretsId>6c915c85-c446-45a3-999d-a6f7fc9ab7e3</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MassTransit" Version="7.1.1" />
+		<PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="7.1.1" />
+		<PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.1.1" />
+		<PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.6.3" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.6.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Messages\Messages.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="Controllers\" />
+	</ItemGroup>
+
+
+</Project>

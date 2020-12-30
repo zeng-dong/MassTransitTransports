@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqOrderService", "Rab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqInventoryService", "RabbitMqInventoryService\RabbitMqInventoryService.csproj", "{1283A4C5-7A92-42C1-9834-10663EA212EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureServiceBusOrderService", "AzureServiceBusOrderService\AzureServiceBusOrderService.csproj", "{4AA59670-9B14-443E-88B5-A11192FEF868}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureServiceBusInventoryService", "AzureServiceBusInventoryService\AzureServiceBusInventoryService.csproj", "{060EC9A7-2AB6-4C16-B588-6753855C1437}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{1283A4C5-7A92-42C1-9834-10663EA212EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1283A4C5-7A92-42C1-9834-10663EA212EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1283A4C5-7A92-42C1-9834-10663EA212EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA59670-9B14-443E-88B5-A11192FEF868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA59670-9B14-443E-88B5-A11192FEF868}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA59670-9B14-443E-88B5-A11192FEF868}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA59670-9B14-443E-88B5-A11192FEF868}.Release|Any CPU.Build.0 = Release|Any CPU
+		{060EC9A7-2AB6-4C16-B588-6753855C1437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{060EC9A7-2AB6-4C16-B588-6753855C1437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{060EC9A7-2AB6-4C16-B588-6753855C1437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{060EC9A7-2AB6-4C16-B588-6753855C1437}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
