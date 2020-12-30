@@ -1,6 +1,6 @@
 ﻿using MassTransit;
 using Messages;
-using System;
+using Serilog;
 using System.Threading.Tasks;
 
 namespace RabbitMqInventoryService
@@ -10,7 +10,7 @@ namespace RabbitMqInventoryService
 
         public async Task Consume(ConsumeContext<Order> context)
         {
-            await Console.Out.WriteLineAsync($"{context.Message.Name}");
+            Log.Debug($"{context.Message.Name}");
         }
     }
 }
