@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderServiceBareBones", "Or
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messages", "Messages\Messages.csproj", "{F7DFD793-A2BA-4AFA-842D-6EBF168A1ABD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqOrderService", "RabbitMqOrderService\RabbitMqOrderService.csproj", "{4EEC5A56-D9B1-411A-8025-64E5A4E90365}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMqInventoryService", "RabbitMqInventoryService\RabbitMqInventoryService.csproj", "{1283A4C5-7A92-42C1-9834-10663EA212EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F7DFD793-A2BA-4AFA-842D-6EBF168A1ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7DFD793-A2BA-4AFA-842D-6EBF168A1ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7DFD793-A2BA-4AFA-842D-6EBF168A1ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EEC5A56-D9B1-411A-8025-64E5A4E90365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EEC5A56-D9B1-411A-8025-64E5A4E90365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EEC5A56-D9B1-411A-8025-64E5A4E90365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EEC5A56-D9B1-411A-8025-64E5A4E90365}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1283A4C5-7A92-42C1-9834-10663EA212EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1283A4C5-7A92-42C1-9834-10663EA212EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1283A4C5-7A92-42C1-9834-10663EA212EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1283A4C5-7A92-42C1-9834-10663EA212EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
