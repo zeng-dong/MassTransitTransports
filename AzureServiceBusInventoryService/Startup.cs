@@ -32,35 +32,35 @@ namespace AzureServiceBusInventoryService
                 config.AddConsumer<QueuedOrderConsumer>();
                 config.AddConsumer<OrderConsumerNumberTwo>();
 
-                config.AddBus
-                   (registrationContext => Bus.Factory.CreateUsingAzureServiceBus
-                   (configurator =>
-                   {
-                       configurator.Host(asbcs);
+                config.AddBus(registrationContext => Bus.Factory.CreateUsingAzureServiceBus
+                    (configurator =>
+                    {
+                        configurator.Host(asbcs);
 
-                       configurator.Message<Order>(m => { m.SetEntityName(ordersTopic); });
+                        configurator.Message<Order>(m => { m.SetEntityName(ordersTopic); });
 
-                       configurator.SubscriptionEndpoint<Order>(subscriptionName, epc =>
-                       {
-                           epc.Consumer<OrderConsumer>(registrationContext);
-                       });
+                        configurator.SubscriptionEndpoint<Order>(subscriptionName, epc =>
+                        {
+                            epc.Consumer<OrderConsumer>(registrationContext);
+                        });
 
-                       configurator.ReceiveEndpoint(queueName, endpointConfigurator =>
-                       {
-                           endpointConfigurator.ConfigureConsumer<QueuedOrderConsumer>(registrationContext);
-                       });
+                        configurator.ReceiveEndpoint(queueName, endpointConfigurator =>
+                        {
+                            endpointConfigurator.ConfigureConsumer<QueuedOrderConsumer>(registrationContext);
+                            // as this is a queue, no need to subscribe to topics, so set this to false.  // not able to set this, queue consumer receives topic, what?                            
+                            //endpointConfigurator.SubscribeMessageTopics = false;
+                        });
 
-                       configurator.SubscriptionEndpoint<Order>(subscriptionNameNumberTwo, epc =>
-                       {
-                           epc.Consumer<OrderConsumerNumberTwo>(registrationContext);
-                       });
-
-                   }));
-
+                        configurator.SubscriptionEndpoint<Order>(subscriptionNameNumberTwo, epc =>
+                        {
+                            epc.Consumer<OrderConsumerNumberTwo>(registrationContext);
+                        });
+                    }));
             });
 
             services.AddSingleton<IHostedService, BusHostedService>();
-            //services.AddMassTransitHostedService();
+            //services.AddMassTransitHostedService();                  // this works with CreateUsingRabbitMQ but not here CreateUsingAzureServiceBus
+            // so I started the hosted service by the line above.
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
