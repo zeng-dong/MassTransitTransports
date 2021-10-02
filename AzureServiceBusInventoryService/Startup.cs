@@ -58,8 +58,8 @@ namespace AzureServiceBusInventoryService
                     }));
             });
 
-            services.AddSingleton<IHostedService, BusHostedService>();
-            //services.AddMassTransitHostedService();                  // this works with CreateUsingRabbitMQ but not here CreateUsingAzureServiceBus
+            //services.AddSingleton<IHostedService, BusHostedService>();
+            services.AddMassTransitHostedService();                  // this works with CreateUsingRabbitMQ but not here CreateUsingAzureServiceBus
             // so I started the hosted service by the line above.
         }
 
